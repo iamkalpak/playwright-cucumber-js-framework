@@ -1,0 +1,37 @@
+{
+  "name": "playwright-cucumber-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:cucumber": "cucumber-js",
+    "test:playwright": "playwright test",
+    "test": "npm run test:cucumber",
+    "delete:allure-results": "rm -rf allure-results",
+    "delete:allure-report": "rm -rf allure-report",
+    "delete:last-run-results": "npm run delete:allure-results && npm run delete:allure-report && rm -rf videos",
+    "show:allure:results":"allure serve allure-results"
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "automation",
+    "testing"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "description": "A Playwright-Cucumber automation framework template",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.8.2",
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "allure-commandline": "^2.40.0",
+    "allure-cucumberjs": "^3.7.2",
+    "allure-playwright": "^3.7.2",
+    "cucumber-html-reporter": "^7.2.0",
+    "fs-extra": "^11.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "mysql2": "^3.11.3"
+  }
+}
